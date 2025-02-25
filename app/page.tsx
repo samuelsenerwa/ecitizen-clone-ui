@@ -1,4 +1,4 @@
-import { Eye, QrCode } from "lucide-react"
+import { Eye, Languages, PersonStanding, QrCode } from "lucide-react"
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,8 +14,32 @@ export default async function SignUp() {
       <div className="h-full">
         <div className="grid lg:grid-cols-2 h-screen gap-8 items-stretch">
           {/* Left Column - Centered Content */}
-          <div className="flex items-center justify-center px-6 py-12">
-            <div className="w-full max-w-[400px] space-y-8">
+          <div className="flex flex-col items-center justify-center px-6 py-12">
+            <div className="flex items-center justify-between w-full px-20">
+              {/* Centered Logo */}
+              <div className="flex-1 flex justify-center">
+                <Image
+                  src="/ecitizen-logo.png"
+                  alt="Republic of Kenya Coat of Arms"
+                  width={200}
+                  height={150}
+                  className="h-18 w-15"
+                  priority
+                />
+              </div>
+
+              {/* Icons on the far right */}
+              <div className="flex items-end gap-4">
+                <div className="flex items-center gap-2 rounded-full bg-blue-500 h-8 w-8 px-2 py-1.5">
+                  <Languages className="text-white" />
+                </div>
+                <div className="flex items-center gap-2 rounded-full bg-blue-500 h-8 w-8 px-2 py-1.5">
+                  <PersonStanding className="text-white" />
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full max-w-[400px] space-y-6">
               <div className="space-y-2 text-center">
                 <h1 className="text-3xl font-bold text-[#1a1f36]">One Login</h1>
                 <p className="text-gray-600">All Government Services</p>
@@ -44,7 +68,7 @@ export default async function SignUp() {
                 </div>
 
                 <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2">
                     <Checkbox
                       id="remember"
                       className="w-4 h-4 border-[#00954a] rounded bg-white text-[#00954a]"
@@ -52,13 +76,15 @@ export default async function SignUp() {
                     <label htmlFor="remember" className="text-sm leading-none text-gray-600">
                       Remember for 30 days
                     </label>
-                    </div>
+                  </div>
                   <Link href="/forgot-password" className="text-sm text-blue-600 hover:underline">
                     Forgot Password
                   </Link>
                 </div>
 
-                <Button className="h-12 w-full bg-[#00a651] text-base font-bold hover:bg-[#00954a] rounded-3xl">Sign In</Button>
+                <Button className="h-12 w-full bg-[#00a651] text-base font-bold hover:bg-[#00954a] rounded-3xl">
+                  Sign In
+                </Button>
 
                 <div className="relative">
                   <div className="absolute inset-0 flex items-center">
@@ -70,11 +96,14 @@ export default async function SignUp() {
                 </div>
 
                 <div className="flex justify-center">
-                  <Button variant="outline" className="bg-[#00a651]/10 h-12 items-center justify-center rounded-full text-base font-bold text-gray-700">
-                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#00a651]">
-                    <QrCode className="text-white " />
-                  </div>
-                  Sign in with Digital ID
+                  <Button
+                    variant="outline"
+                    className="bg-[#00a651]/10 h-12 items-center justify-center rounded-full text-base font-bold text-gray-700"
+                  >
+                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#00a651]">
+                      <QrCode className="text-white" />
+                    </div>
+                    Sign in with Digital ID
                   </Button>
                 </div>
               </form>
@@ -87,6 +116,7 @@ export default async function SignUp() {
               </p>
             </div>
           </div>
+
 
           {/* Right Column - Full-height Image */}
           <div className="hidden lg:block relative min-h-[90vh] lg:min-h-[auto]">
