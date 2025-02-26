@@ -14,7 +14,7 @@ export default async function SignUp() {
       <div className="h-full">
         <div className="grid lg:grid-cols-2 h-screen gap-8 items-stretch">
           {/* Left Column - Centered Content */}
-          <div className="flex flex-col items-center justify-center px-6 py-12">
+          <div className="flex flex-col items-center justify-center px-6 py-12 sm:py-0">
             <div className="flex items-center justify-between w-full px-4 sm:px-20">
               {/* Centered Logo */}
               <div className="flex lg:flex-1 justify-center">
@@ -40,13 +40,13 @@ export default async function SignUp() {
             </div>
 
 
-            <div className="w-full max-w-[400px] space-y-6">
+            <div className="w-full max-w-[400px] space-y-6 ">
               <div className="space-y-2 text-center">
                 <h1 className="text-3xl font-bold text-[#1a1f36]">One Login</h1>
                 <p className="text-gray-600">All Government Services</p>
               </div>
 
-              <form className="space-y-6">
+              <form className="space-y-6 py-12">
                 <div className="space-y-2">
                   <Label htmlFor="email">
                   Email address or ID number <span className="text-red-500">*</span>
