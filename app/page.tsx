@@ -48,9 +48,13 @@ export default async function SignUp() {
               <form className="space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="email">
-                    Email address or ID number <span className="text-red-500">*</span>
+                  Email address or ID number <span className="text-red-500">*</span>
                   </Label>
-                  <Input id="email" className="h-12 bg-[#fffbeb] px-4" required />
+                  <Input 
+                  id="email" 
+                  className="h-12 px-4" 
+                  required 
+                  />
                 </div>
 
                 <div className="space-y-2">
@@ -60,7 +64,7 @@ export default async function SignUp() {
                     </Label>
                   </div>
                   <div className="relative">
-                    <Input id="password" type="password" className="h-12 bg-[#fffbeb] px-4 pr-12" required />
+                    <Input id="password" type="password" className="h-12 px-4 pr-12" required />
                     <button type="button" className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500">
                       <Eye className="h-5 w-5" />
                     </button>
@@ -77,13 +81,13 @@ export default async function SignUp() {
                       Remember for 30 days
                     </label>
                   </div>
-                  <Link href="/forgot-password" className="text-sm text-blue-600 hover:underline">
+                  <Link href="/forgot-password" className="text-sm text-blue-600 hover:underline font-semibold">
                     Forgot Password
                   </Link>
                 </div>
 
                 <Button className="h-12 w-full bg-[#00a651] text-base font-bold hover:bg-[#00954a] rounded-3xl">
-                  Sign In
+                  <p className="text-sm">Sign In</p>
                 </Button>
 
                 <div className="relative">
@@ -100,10 +104,10 @@ export default async function SignUp() {
                     variant="outline"
                     className="bg-[#00a651]/10 h-12 items-center justify-center rounded-full text-base font-bold text-gray-700"
                   >
-                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#00a651]">
+                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#00a651] ">
                       <QrCode className="text-white" />
                     </div>
-                    Sign in with Digital ID
+                    <p className="text-xs">Sign in with Digital ID</p>
                   </Button>
                 </div>
               </form>
