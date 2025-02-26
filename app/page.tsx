@@ -15,21 +15,21 @@ export default async function SignUp() {
         <div className="grid lg:grid-cols-2 h-screen gap-8 items-stretch">
           {/* Left Column - Centered Content */}
           <div className="flex flex-col items-center justify-center px-6 py-12">
-            <div className="flex items-center justify-between w-full px-20">
+            <div className="flex items-center justify-between w-full px-4 sm:px-20">
               {/* Centered Logo */}
-              <div className="flex-1 flex justify-center">
+              <div className="flex lg:flex-1 justify-center">
                 <Image
                   src="/ecitizen-logo.png"
                   alt="Republic of Kenya Coat of Arms"
                   width={200}
                   height={150}
-                  className="h-18 w-15"
+                  className="h-48 w-48 sm:h-48 sm:w-48 md:h-48 md:w-48 object-cover"
                   priority
                 />
               </div>
 
               {/* Icons on the far right */}
-              <div className="flex items-end gap-4">
+              <div className="flex items-end gap-4 ml-4">
                 <div className="flex items-center gap-2 rounded-full bg-blue-500 h-8 w-8 px-2 py-1.5">
                   <Languages className="text-white" />
                 </div>
@@ -38,6 +38,7 @@ export default async function SignUp() {
                 </div>
               </div>
             </div>
+
 
             <div className="w-full max-w-[400px] space-y-6">
               <div className="space-y-2 text-center">
